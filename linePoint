@@ -1,6 +1,24 @@
 from math import sqrt, fabs
-
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "a7005738",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt \n",
+    "import pandas as pd\n",
+    "from scipy.stats import pearsonr\n",
+    "from astropy.io import fits\n",
+    "from astropy.table import Table\n",
+    "from tqdm import tqdm\n",
+    "from sklearn.preprocessing import normalize\n",
+    "from matplotlib.patches import Circle"
 functions = []
+
 
 for i in range(3):
     def f():
