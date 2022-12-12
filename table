@@ -16,7 +16,7 @@ num = ((1+Z)**2))-1
 deno = ((1+Z)**2)+1
 H = sl/Ho
  
-radius = (num/deno)*H  
+radi = (num/deno)*H  
 
 for i in Z:
     d = radius
