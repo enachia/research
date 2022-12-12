@@ -21,3 +21,7 @@ cd /data78/welker/haloshaper_smooth/
 mpirun -np 10 haloshapeNH -nzi 970 | tee hm6.log
 exit 0
 
+cd/data78/welker/my_gama/plotter
+mpirun -np 1 Delauney_3D 'Gama_Catalog.csv' 'data78/welker/my_gama' |tee mytees.log
+
+exit0
