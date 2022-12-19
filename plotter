@@ -7,29 +7,28 @@ df_new = df.iloc[:,[0,1,2,4,5]]
 Z = np.array(df_new.iloc[:,[1]])
 RA = np.array(df_new.iloc[:,[2]])
 DEC = np.array(df_new.iloc[:,[3]])
-
+#defining 
 Ho = 67.8
 sl = 2.99792458e+5
 
 num = ((1+Z)**2)-1
 deno = ((1+Z)**2)+1
+cos = np.cos     
+sin = np.sin
+x = d*cos(RArad)*cos(DECrad)
+y = d*sin(RArad)*cos(DECrad)
+z = d*sin(DECrad)
+#circle
 H = sl/Ho
- 
 rad = (nume/deno)*H   
+RArad = RA * (np.pi/180)    
+DECrad = DEC * (np.pi/180)
 
 for i in Z:
     d = radius
 
-RArad = RA * (np.pi/180)    
-DECrad = DEC * (np.pi/180)
 
-cos = np.cos     
-sin = np.sin
-
-x = d*cos(RArad)*cos(DECrad)
-y = d*sin(RArad)*cos(DECrad)
-z = d*sin(DECrad)
-
+#plot
 fig = plt.figure(figsize=(6,6))
 ax = fig.add_subplot(111, projection='3d')
 ax.set_title('Galaxies from GAMA DS3 Survey (Z < 0.4)')
